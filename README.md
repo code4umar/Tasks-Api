@@ -115,3 +115,9 @@ npm run test:e2e  # e2e test — POST /auth/login, success + wrong password
 - `User.password` is declared `{ select: false }` on the entity — it's
   excluded from normal queries by default and must be explicitly requested
   (as `AuthService.login` does) to be compared during login.
+
+
+## Verified
+Full auth flow tested: register, login, guarded routes (401 without token,
+success with token), 404 handling for bad project/task ids. Unit test and
+e2e test both passing.
